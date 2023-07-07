@@ -51,3 +51,23 @@ struct User: Codable, Equatable {
 //        사용자는 사용자로 로그인하고 이 사용자를 FIREBASE 데이터베이스에 저장합니다.
     }
 }
+
+
+// 이 함수는 우리가 만든 사용자 개체를 가져옵니다.
+// Jason으로 변환하고 주요 현재 사용자에 대한 사용자 기본값으로 저장합니다.
+func saveUserLocally(_ user: User) {
+    let encoder = JSONEncoder()
+    
+    do {
+        let data = try encoder.encode(user)
+        UserDefaults.standard.set(data, forKey: kCURRENTUSER)
+    } catch {
+        print("error saving user locally ", error.localizedDescription)
+    }
+}
+/*
+ 사용자 정보를 로컬에 저장하는 함수입니다. 처음으로 JSONEncoder 객체를 생성합니다. 이 객체는 User 객체를 JSON 데이터로 인코딩합니다. 그런 다음 try-catch 문을 사용하여 User 객체를 인코딩하면 데이터를 UserDefaults 객체에 저장합니다. UserDefaults 객체는 간단한 데이터의 저장을 지원하는 자동 저장소입니다. set(_:forKey:) 메서드를 사용하여 kCURRENTUSER 라는 키 값으로 데이터를 저장합니다. 이렇게 하면 앱을 종료한 이후에도 사용자 정보가 유지됩니다. 만약 데이터를 성공적으로 저장하지 못하면, 에러를 캐치하고 출력합니다. 이 때, error.localizedDescription을 사용하여 발생한 에러를 출력합니다.
+ 
+ 
+ UserDefaults는 iOS에서 제공하는 기본 라이브러리인 Foundation에 속한 클래스입니다. Foundation은 많은 iOS 앱 개발을 위한 필수적인 기본 라이브러리이며, UserDefaults는 그 중 하나입니다. 
+ */

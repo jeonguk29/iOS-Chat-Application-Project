@@ -54,7 +54,8 @@ class LoginViewController: UIViewController {
         // case에 따라 텍스트 필드에 누락된 값이 없는지 확인하는 메서드
         if isDataInputedFor(type: isLogin ? "login" : "registration") {
             //login or register
-            print("로그인 또는 등록 버튼 눌린것을 확인")
+            //print("로그인 또는 등록 버튼 눌린것을 확인")
+            isLogin ? loginUser() : registerUser()
         } else {
             ProgressHUD.showFailed("ALL Fields are required")
             // 라이브러리 메서드 사용
@@ -165,6 +166,50 @@ class LoginViewController: UIViewController {
         default :
             return emailTextField.text != ""
         }
+    }
+    
+    private func loginUser() {
+        FirebaseUserListener.shared.loginUserWithEmail(email: emailTextField.text!, password: passwordTextField.text!) { (error, isEmailVerified) in
+            
+            if error == nil {
+                if isEmailVerified { // 이메일이 확인 된 경우
+                    print("user has logged in with email", User.currentUser?.email)
+                    self.goToApp()
+                } else {// 실패시
+                    ProgressHUD.showFailed("Please verify email.")
+                    self.resendEmailButtonOutlet.isHidden = false
+                }
+            } else {
+                ProgressHUD.showFailed(error!.localizedDescription)
+            }
+            
+        }
+    }
+
+    private func registerUser() {
+        
+        if passwordTextField.text! == repeatPasswordTextField.text! {
+            // 비밀번호, 비밀번호 확인이 일치하면 회원가입을 위해, 파이어베이스 등록을 위해 FirebaseUserListener를 사용
+            FirebaseUserListener.shared.registerUserWith(email: emailTextField.text!, password: passwordTextField.text!) { (error) in
+                if error == nil {
+                    ProgressHUD.showSuccess("Verification email sent.")
+                    self.resendEmailButtonOutlet.isHidden = false
+                    // 에러가 없다면 사용자에게 확인 메일을 보냈다고 전송, 가렸던 버튼도 보이게 만들기
+                } else {
+                    ProgressHUD.showFailed(error!.localizedDescription)
+                }
+            }
+            
+        } else {
+            ProgressHUD.showFailed("The Passwords don't match")
+        }
+    }
+    
+    
+    
+    // MARK: - Navigation
+    private func goToApp(){
+        print("go to app")
     }
 }
 

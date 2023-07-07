@@ -18,6 +18,8 @@
 		64CCA66F2A554F6900523486 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64CCA66E2A554F6900523486 /* GoogleService-Info.plist */; };
 		64CCA6712A569A8500523486 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCA6702A569A8500523486 /* User.swift */; };
 		64CCA6742A569D5100523486 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCA6732A569D5100523486 /* Constants.swift */; };
+		64CCA6762A56A6EC00523486 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCA6752A56A6EC00523486 /* FCollectionReference.swift */; };
+		64CCA6792A56A8A200523486 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCA6782A56A8A200523486 /* FirebaseUserListener.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		64CCA66E2A554F6900523486 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64CCA6702A569A8500523486 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		64CCA6732A569D5100523486 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		64CCA6752A56A6EC00523486 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
+		64CCA6782A56A8A200523486 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
 		67358F3B4BAFD7D50613295D /* Pods_Messager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B605FEE19907385DF590E73 /* Pods-Messager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messager.release.xcconfig"; path = "Target Support Files/Pods-Messager/Pods-Messager.release.xcconfig"; sourceTree = "<group>"; };
 		EF465C954DAD89113DE52B76 /* Pods-Messager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messager.debug.xcconfig"; path = "Target Support Files/Pods-Messager/Pods-Messager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 				64CCA6542A552D3500523486 /* SceneDelegate.swift */,
 				64CCA6562A552D3500523486 /* LoginViewController.swift */,
 				64CCA6732A569D5100523486 /* Constants.swift */,
+				64CCA6772A56A84D00523486 /* FirebaseHelpers */,
 				64CCA6722A569A9100523486 /* Model */,
 				64CCA6582A552D3500523486 /* Main.storyboard */,
 				64CCA65E2A552D3700523486 /* Assets.xcassets */,
@@ -100,6 +105,15 @@
 				64CCA6702A569A8500523486 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		64CCA6772A56A84D00523486 /* FirebaseHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				64CCA6752A56A6EC00523486 /* FCollectionReference.swift */,
+				64CCA6782A56A8A200523486 /* FirebaseUserListener.swift */,
+			);
+			path = FirebaseHelpers;
 			sourceTree = "<group>";
 		};
 		DDE2965272DE5A16B5D27C67 /* Pods */ = {
@@ -230,8 +244,10 @@
 				64CCA65D2A552D3500523486 /* Messager.xcdatamodeld in Sources */,
 				64CCA6572A552D3500523486 /* LoginViewController.swift in Sources */,
 				64CCA6532A552D3500523486 /* AppDelegate.swift in Sources */,
+				64CCA6792A56A8A200523486 /* FirebaseUserListener.swift in Sources */,
 				64CCA6712A569A8500523486 /* User.swift in Sources */,
 				64CCA6552A552D3500523486 /* SceneDelegate.swift in Sources */,
+				64CCA6762A56A6EC00523486 /* FCollectionReference.swift in Sources */,
 				64CCA6742A569D5100523486 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
