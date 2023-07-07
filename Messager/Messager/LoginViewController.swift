@@ -235,7 +235,21 @@ class LoginViewController: UIViewController {
     
     // MARK: - Navigation
     private func goToApp(){
-        print("go to app")
+        //print("go to app")
+        let mainView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainView") as! UITabBarController
+        
+        mainView.modalPresentationStyle = .fullScreen
+        self.present(mainView, animated: true, completion: nil)
+        // self는 현제 뷰컨을 말함 현제 뷰컨에서 present
+        
+/*
+        위 코드는 앱 이용 중 로그인이 성공하고, 메인 화면으로 이동하는 코드입니다.
+        `goToApp` 함수는 위 코드의 이름처럼 앱으로 진입하는 함수로, `private` 접근 제어자로 선언된 비공개 메서드입니다. 함수 내부에서는 `UIStoryboard`를 사용해서 `Main.storyboard`를 참조하고, "MainView"라는 identifier를 가진 `UITabBarController` 객체를 생성합니다.
+        그리고, 이를 modal로 present하기 위해 `modalPresentationStyle` 속성을 `.fullScreen`으로 설정하고, `present(_:animated:completion:)` 메서드로 `mainView`를 present합니다. `animated`를 true로 설정하면, 화면 전환 시 애니메이션 효과가 적용됩니다.
+        `present` 함수가 호출되는 시점에서 `self`는 로그인 화면에서 호출하는 경우가 많습니다. `present` 함수를 호출하면, 현재 뷰컨트롤러(`LoginViewController`)에서 `mainView`로 화면 전환이 일어나게 됩니다.
+        즉, 이 함수는 로그인 이후, 메인 화면으로 들어가기 위해 `MainViewController` 객체를 생성하고 present함으로써, 화면을 전환하는 역할을 합니다.
+ */
     }
+        
 }
 

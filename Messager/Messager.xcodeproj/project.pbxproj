@@ -62,6 +62,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		646102672A57F42D0074B313 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				64CCA6732A569D5100523486 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		64CCA6462A552D3500523486 = {
 			isa = PBXGroup;
 			children = (
@@ -87,9 +95,9 @@
 				64CCA6522A552D3500523486 /* AppDelegate.swift */,
 				64CCA6542A552D3500523486 /* SceneDelegate.swift */,
 				64CCA6562A552D3500523486 /* LoginViewController.swift */,
-				64CCA6732A569D5100523486 /* Constants.swift */,
 				64CCA6772A56A84D00523486 /* FirebaseHelpers */,
 				64CCA6722A569A9100523486 /* Model */,
+				646102672A57F42D0074B313 /* Helpers */,
 				64CCA6582A552D3500523486 /* Main.storyboard */,
 				64CCA65E2A552D3700523486 /* Assets.xcassets */,
 				64CCA6602A552D3700523486 /* LaunchScreen.storyboard */,
