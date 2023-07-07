@@ -68,6 +68,30 @@ class FirebaseUserListener{
         }
     }
     
+    //MARK: - Resend link methods
+    // 확인 이메일 다시 보내기
+    // 처음 메일 보낸것과 마찮가지 이며 현재 사용자가 있는지 확인하고 로그인을 다시 로드 하고 보내면 됨
+    func resendVerificationEmail(email: String, completion: @escaping (_ error: Error?) -> Void) {
+        
+        Auth.auth().currentUser?.reload(completion: { (error) in
+            // 확인 이메일을 다시 보내기 위해서는 리로드 해야함
+            Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+                // 다시 보내고 에러가 있으면 아래 코드 실행
+                completion(error)
+            })
+        })
+    }
+    
+    
+    // MARK: - Password Reset
+    func resetPasswordFor(email: String, completion: @escaping (_ error: Error?) -> Void) {
+        
+        // 이메일과 함께 전달 (비밀번호 재설정 링크를 이메일로 보냄)
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            completion(error)
+        }
+    }
+    
     //MARK: - Save users
     func saveUserToFireStore(_ user: User) {
         

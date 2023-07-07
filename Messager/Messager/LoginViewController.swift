@@ -65,7 +65,8 @@ class LoginViewController: UIViewController {
     @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
         // 비밀번호를 리셋
         if isDataInputedFor(type: "password") {
-            print("비밀번호를 잃어버림 버튼 눌린것을 확인")
+            //print("비밀번호를 잃어버림 버튼 눌린것을 확인")
+            resetPassword()
         } else {
             ProgressHUD.showFailed("Email is required.")
         }
@@ -75,7 +76,8 @@ class LoginViewController: UIViewController {
     @IBAction func resendEmailButtonPressed(_ sender: Any) {
         // 확인 이메일을 보내겠다.
         if isDataInputedFor(type: "password") {
-            print("확인 이메일 전송 버튼 눌린것을 확인")
+          //  print("확인 이메일 전송 버튼 눌린것을 확인")
+            resendVerificationEmail()
         } else {
             ProgressHUD.showFailed("Email is required.")
         }
@@ -204,6 +206,30 @@ class LoginViewController: UIViewController {
             ProgressHUD.showFailed("The Passwords don't match")
         }
     }
+    
+    private func resetPassword() {
+        FirebaseUserListener.shared.resetPasswordFor(email: emailTextField.text!) { (error) in
+            
+            if error == nil {
+                ProgressHUD.showSuccess("Reset link sent to email.")
+            } else {
+                ProgressHUD.showFailed(error!.localizedDescription)
+            }
+        }
+    }
+    
+    private func resendVerificationEmail() {
+        FirebaseUserListener.shared.resendVerificationEmail(email: emailTextField.text!) { (error) in
+            
+            if error == nil {
+                ProgressHUD.showSuccess("New verification email sent.")
+            } else {
+                ProgressHUD.showFailed(error!.localizedDescription)
+                print(error!.localizedDescription)
+            }
+        }
+    }
+    
     
     
     
