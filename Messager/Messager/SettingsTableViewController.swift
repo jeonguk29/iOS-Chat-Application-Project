@@ -49,6 +49,17 @@ class SettingsTableViewController: UITableViewController {
         return section == 0 ? 0.0 : 10.0
     }
 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        // 따라서 사용자가 셀을 선택할 때마다 해당 셀을 선택하려고 합니다. 즉 누르면 눌렀다는 것은 인식할 수 있게
+        
+        if indexPath.section == 0 && indexPath.row == 0 {
+            //0섹션의 0로우면 세그위이를 타고 화면 전환
+            performSegue(withIdentifier: "settingsToEditProfileSeg", sender: self)
+        }
+    }
 
     //MARK: - IBActions
     
