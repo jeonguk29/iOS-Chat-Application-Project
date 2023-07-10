@@ -15,7 +15,7 @@ struct User: Codable, Equatable {
     var userName: String    // 사용자 이름
     var email: String       // 사용자 이메일
     var pushId = ""         // 사용자 push id(알림)
-    var avaterLink = ""     // 사용자 아바타 링크
+    var avatarLink = ""     // 사용자 아바타 링크
     var status: String      // 사용자 상태
     
     static var currentID: String { //현재 로그인한 사용자의 UID를 반환하는 연산 프로퍼티입니다.

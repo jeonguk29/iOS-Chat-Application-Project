@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F78F26F4B8405A8B66CF87B /* Pods_Messager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67358F3B4BAFD7D50613295D /* Pods_Messager.framework */; };
+		646102692A5BD1300074B313 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646102682A5BD1300074B313 /* SettingsTableViewController.swift */; };
 		64CCA6532A552D3500523486 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCA6522A552D3500523486 /* AppDelegate.swift */; };
 		64CCA6552A552D3500523486 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCA6542A552D3500523486 /* SceneDelegate.swift */; };
 		64CCA6572A552D3500523486 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCA6562A552D3500523486 /* LoginViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		646102682A5BD1300074B313 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		64CCA64F2A552D3500523486 /* Messager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64CCA6522A552D3500523486 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64CCA6542A552D3500523486 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				64CCA6722A569A9100523486 /* Model */,
 				646102672A57F42D0074B313 /* Helpers */,
 				64CCA6582A552D3500523486 /* Main.storyboard */,
+				646102682A5BD1300074B313 /* SettingsTableViewController.swift */,
 				64CCA65E2A552D3700523486 /* Assets.xcassets */,
 				64CCA6602A552D3700523486 /* LaunchScreen.storyboard */,
 				64CCA6632A552D3700523486 /* Info.plist */,
@@ -257,6 +260,7 @@
 				64CCA6552A552D3500523486 /* SceneDelegate.swift in Sources */,
 				64CCA6762A56A6EC00523486 /* FCollectionReference.swift in Sources */,
 				64CCA6742A569D5100523486 /* Constants.swift in Sources */,
+				646102692A5BD1300074B313 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

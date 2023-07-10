@@ -56,7 +56,7 @@ class FirebaseUserListener{
                 if authDataResult?.user != nil {
                     
                     // User 객체를 생성합니다.
-                    let user = User(id: authDataResult!.user.uid, userName: email, email: email, pushId: "", avaterLink: "", status: "Hey there I'm using Messager")
+                    let user = User(id: authDataResult!.user.uid, userName: email, email: email, pushId: "", avatarLink: "", status: "Hey there I'm using Messager")
                     
                     // 로컬 데이터베이스에 저장할 구현이 필요한 함수
                     saveUserLocally(user)
@@ -90,6 +90,23 @@ class FirebaseUserListener{
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
             completion(error)
         }
+    }
+    
+    // MARK: - LogOut (setting 창에서)
+    func logOutCurrentUser(completion: @escaping (_ error: Error?) -> Void) {
+        
+        do {
+            try Auth.auth().signOut() // 인증 사용자 로그아웃
+            
+            userDefaults.removeObject(forKey: kCURRENTUSER) // 로컬에 저장되어 있는 사용자 객체 삭제
+            userDefaults.synchronize() // 사용자 기본 값 동기화
+            //이 작업을 수행하는 이유는 사용자가 로그인할 때 해당 사본을 보관하기 때문입니다.
+            
+            completion(nil)
+        } catch let error as NSError {
+            completion(error)
+        }
+        
     }
     
     //MARK: - Save users
