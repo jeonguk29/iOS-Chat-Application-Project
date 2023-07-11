@@ -76,7 +76,7 @@ class EditProfileTableViewController: UITableViewController {
             if user.avatarLink != "" {
                 //   set 아바타
                 FileStorage.downloadImage(imageUrl: user.avatarLink) { (avatarImage) in
-                    self.avatarImageView.image = avatarImage
+                    self.avatarImageView.image = avatarImage?.circleMasked
                 }
             }
         }
@@ -167,7 +167,7 @@ extension EditProfileTableViewController : GalleryControllerDelegate {
                 
                 if avatarImage != nil {
                     self.uploadAvatarImage(avatarImage!) // 그전에 이미지 업로드 한걸 화면에 보여주기
-                    self.avatarImageView.image = avatarImage
+                    self.avatarImageView.image = avatarImage?.circleMasked
                 } else {
                     ProgressHUD.showError("Couldn't select image!")
                 }

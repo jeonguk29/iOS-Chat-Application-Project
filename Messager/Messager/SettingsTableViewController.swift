@@ -107,7 +107,7 @@ class SettingsTableViewController: UITableViewController {
             if user.avatarLink != "" {
                 // 다운로드 and 셋팅 아바타 이미지
                 FileStorage.downloadImage(imageUrl: user.avatarLink) { (avatarImage) in
-                    self.avatarImageView.image = avatarImage
+                    self.avatarImageView.image = avatarImage?.circleMasked
                 }
             }
         }
