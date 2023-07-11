@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Messager 앱에서 당신의 사진 앨범을 사용 하고 싶습니다.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Messager 앱에서 당신의 미디어를 사용 하고 싶습니다.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Messager 앱에서 당신의 카메라를 사용 하고 싶습니다.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

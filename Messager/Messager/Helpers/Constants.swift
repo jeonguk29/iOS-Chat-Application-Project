@@ -16,3 +16,5 @@ let userDefaults = UserDefaults.standard
  해당 코드는 UserDefaults 클래스의 standard 프로퍼티를 사용하여 앱의 기본 UserDefaults 객체에 대한 참조를 만들고 있습니다. 이 참조를 사용하여 앱의 로컬 저장소에 데이터를 쓰거나 읽어 올 수 있습니다.
  */
 public let kCURRENTUSER = "currentUser"
+public let kFILEREFERENCE = "gs://messanger-32fda.appspot.com"
+// 파이어베이스 Storage의 root경로

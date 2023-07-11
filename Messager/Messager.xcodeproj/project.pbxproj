@@ -10,6 +10,8 @@
 		2F78F26F4B8405A8B66CF87B /* Pods_Messager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67358F3B4BAFD7D50613295D /* Pods_Messager.framework */; };
 		646102692A5BD1300074B313 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646102682A5BD1300074B313 /* SettingsTableViewController.swift */; };
 		6461026B2A5BEF620074B313 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6461026A2A5BEF610074B313 /* EditProfileTableViewController.swift */; };
+		6461026D2A5D242C0074B313 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6461026C2A5D242C0074B313 /* FileStorage.swift */; };
+		6461026F2A5D316B0074B313 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6461026E2A5D316B0074B313 /* GlobalFunctions.swift */; };
 		64CCA6532A552D3500523486 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCA6522A552D3500523486 /* AppDelegate.swift */; };
 		64CCA6552A552D3500523486 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCA6542A552D3500523486 /* SceneDelegate.swift */; };
 		64CCA6572A552D3500523486 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCA6562A552D3500523486 /* LoginViewController.swift */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		646102682A5BD1300074B313 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		6461026A2A5BEF610074B313 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		6461026C2A5D242C0074B313 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
+		6461026E2A5D316B0074B313 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		64CCA64F2A552D3500523486 /* Messager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64CCA6522A552D3500523486 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64CCA6542A552D3500523486 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				64CCA6732A569D5100523486 /* Constants.swift */,
+				6461026E2A5D316B0074B313 /* GlobalFunctions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			children = (
 				64CCA6752A56A6EC00523486 /* FCollectionReference.swift */,
 				64CCA6782A56A8A200523486 /* FirebaseUserListener.swift */,
+				6461026C2A5D242C0074B313 /* FileStorage.swift */,
 			);
 			path = FirebaseHelpers;
 			sourceTree = "<group>";
@@ -256,6 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				64CCA65D2A552D3500523486 /* Messager.xcdatamodeld in Sources */,
+				6461026D2A5D242C0074B313 /* FileStorage.swift in Sources */,
+				6461026F2A5D316B0074B313 /* GlobalFunctions.swift in Sources */,
 				64CCA6572A552D3500523486 /* LoginViewController.swift in Sources */,
 				64CCA6532A552D3500523486 /* AppDelegate.swift in Sources */,
 				6461026B2A5BEF620074B313 /* EditProfileTableViewController.swift in Sources */,
